@@ -11,13 +11,12 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
 set(msg_files
+  "msg/ArgusMeasureFrame.msg"
   "msg/ArgusPixel.msg"
   "msg/ArgusResults.msg"
   "msg/ArgusResultsAux.msg"
   "msg/ArgusResultsBin.msg"
   "msg/ArgusResultsDebug.msg"
-  "msg/ArgusState.msg"
-  "msg/ArgusStatus.msg"
   "msg/ArgusXTalk.msg"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
