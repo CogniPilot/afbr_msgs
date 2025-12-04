@@ -54,7 +54,7 @@ uint8 STATUS_ARGUS_ACTIVE							= 103
 std_msgs/Header			header
 int16					status
 ArgusMeasureFrame		frame[<=1]
-builtin_interfaces/Time	time_stamp 			# Time in milliseconds converted to ROS 2 timestamp (sec and nano_sec)
+builtin_interfaces/Time	time_stamp 			# Time in sec and usec converted to ROS 2 timestamp (sec and nsec)
 											# (measured since the last MCU startup/reset) when the measurement was triggered.
 ArgusPixel 				pixel[<=8][<=4]		# [long edge][short edge]
 ArgusPixel 				pixel_ref[<=1]
