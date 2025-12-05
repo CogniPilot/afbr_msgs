@@ -1,6 +1,6 @@
 float32	dca_amplitude				# The amplitude (uq12.4) that is evaluated and used in the DCA module.
 
-uint32	data[<=33]					# Raw x-y-sorted ADC results from the device.
+uint32[<=33]	data					# Raw x-y-sorted ADC results from the device.
 									# The raw data contains the saturation flag which are the two MSBs which
 									# might need to be removed via the 0x3FFFFFU mask:
 									# sample = Data[i] & 0x3FFFFFU;.
@@ -14,14 +14,14 @@ uint32	data[<=33]					# Raw x-y-sorted ADC results from the device.
 									# e.g. [n=0,p=0][n=0,p=1]..[n=0,p=3][n=1,p=0]...[n=1,p=3]...[n=31,p=3]
 
 
-ArgusXTalk x_talk_predictor[<=2]	# The current crosstalk correction values as determined by the
+ArgusXTalk[<=2]	x_talk_predictor	# The current crosstalk correction values as determined by the
 									# crosstalk predictor algorithm. This is basically the temperature
 									# dependent portion of the crosstalk correction.
 									# Note that there are two values for the upper and lower two rows
 									# respectively.
 
 
-ArgusXTalk x_talk_monitor[<=4]		# The current crosstalk correction values as determined by the
+ArgusXTalk[<=4]	x_talk_monitor		# The current crosstalk correction values as determined by the
 									# crosstalk monitor algorithm. This is a dynamic portion of the
 									# crosstalk correction that is determined by monitoring passive pixels.
 									# Note that the values are valid row-wise.
