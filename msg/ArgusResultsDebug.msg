@@ -1,6 +1,6 @@
 float32	dca_amplitude				# The amplitude (uq12.4) that is evaluated and used in the DCA module.
 
-uint32[<=33]	data					# Raw x-y-sorted ADC results from the device.
+uint32[<=132]	data					# Raw x-y-sorted ADC results from the device.
 									# The raw data contains the saturation flag which are the two MSBs which
 									# might need to be removed via the 0x3FFFFFU mask:
 									# sample = Data[i] & 0x3FFFFFU;.
